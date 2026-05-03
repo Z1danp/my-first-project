@@ -15,7 +15,10 @@ Saya menggunakan beberapa pustaka Python dalam pengerjaan proyek ini:
 
 ### 📊Hasil Analisis
 
-1. **Korelasi Fitur**
+1. **Distribusi Target**
+   Plot distribusi target menunjukkan bahwa distribusinya itu skew ke kanan, yang mana ini ngindikasiin kalau data tidak terdistribusi dengan normal dan tidak memenuhi asumsi linear regresi. Sehingga perlu dilakukan transformasi data. Pada proyek ini, saya menggunakan transformasi Box-Cox. ![distribusi target](images\distribusi fitur.png)
+3. **Korelasi Fitur**
+4. **Analisis Residual**
 
 ### Highlight Teknis
 
