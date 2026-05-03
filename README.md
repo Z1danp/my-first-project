@@ -16,7 +16,7 @@ Saya menggunakan beberapa pustaka Python dalam pengerjaan proyek ini:
 ### 📊Hasil Analisis
 
 1. **Distribusi Target**
-   Plot distribusi target menunjukkan bahwa distribusinya itu skew ke kanan, yang mana ini ngindikasiin kalau data tidak terdistribusi dengan normal dan tidak memenuhi asumsi linear regresi. Sehingga perlu dilakukan transformasi data. Pada proyek ini, saya menggunakan transformasi data menggunakan metode Box-Cox.
+   Plot distribusi target menunjukkan bahwa distribusinya itu skew ke kanan, mengindikasikan data tidak terdistribusi dengan normal dan tidak memenuhi asumsi linear regresi. Sehingga perlu dilakukan transformasi data. Pada proyek ini, saya menggunakan transformasi data menggunakan metode Box-Cox.
 
    ![distribusi target](images/distribusi-fitur.png)
 
@@ -24,21 +24,13 @@ Saya menggunakan beberapa pustaka Python dalam pengerjaan proyek ini:
 
    ![transformasi target](images/normal-dist.png).
 3. **Korelasi Fitur**
-   Korelasi fitur ini dilakukan untuk menseleksi fitur dengan angka korelasi > 0,5 yang selanjutnya fitur ini akan digunakan untuk membangun model
+   Korelasi fitur ini dilakukan untuk menyeleksi fitur dengan angka korelasi > 0,5 yang selanjutnya fitur ini akan digunakan untuk membangun model
 
    ![heatmap](images/heatmap.png)
-5. **Analisis Residual**
+4. **Analisis Residual**
    Dari grafik ini menunjukkan bahwa terdapat beberapa prediksi yang melenceng jauh mengindikasikan keberadaan outlier.
 
    ![pred vs. act](images/Predict-vs.png)
-
-### Highlight Teknis
-
-Saya menyertakan beberapa langkah untuk memastika model bekerja secara optimal:
-
-1. **Analisis Distribusi & Transformasi Box-Cox**: Berdasarkan uji Shapiro-Wilk, ditemukan bahwa variabel target tidak terdistribusi normal. Untuk memenuhi asumsi regresi linear, saya menerapkan transformasi Box-Cox ($\lambda \ \approx -0.076$) yang secara signifikan memperbaiki distribusi data.
-2. **Seleksi Fitur Berbasis Korelasi**: Melakukan eliminiasi fitur yang tidak memiliki hubungan signifikan terhadap rumah untuk mengurangi kompleksitas model.
-3. **Data Cleaning**: Menangani nilai yang hilang secara sistematis berdasarkan konteks setiap fitur.
 
 ### 📊Hasil Model
 
