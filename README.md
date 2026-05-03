@@ -30,7 +30,7 @@ Saya menggunakan beberapa pustaka Python dalam pengerjaan proyek ini:
 5. **Analisis Residual**
    Dari grafik ini menunjukkan bahwa terdapat beberapa prediksi yang melenceng jauh mengindikasikan keberadaan outlier.
 
-   ![pred vs. act](images\Predict-vs.png)
+   ![pred vs. act](my-first-project\images\Predict-vs.png)
 
 ### Highlight Teknis
 
