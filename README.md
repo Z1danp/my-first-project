@@ -47,4 +47,10 @@ Model yang dibangun menggunakan algoritma regresi linear memberikan performa yan
 - **R-Squared**: 0.838
    Model mampu menjelaskan sekitar 83,8% variasi harga rumah hanya dengan seleksi fitur sederhana
 
-- 
+### 🔍 Perbaikan
+
+Meskipun hasil awal sudah cukup baik, terdapat beberapa aspek yang saya perhatikan untuk meningkatkan akurasi model:
+
+- **Multikolinearitas**: Terdapat beberapa fitur independen yang saling berkolerasi kuat pada heatmap. Pengembangan model selanjutnya menggunakan teknik seperti VIF untuk menangani ini
+- **Model Non-Linear**: Penggunaan algoritma berbasis pohon seperti Random Forest atau XGBoost berpotensi menangkap pola non-linear, mengingat hubungan antar fitur rumah cukup kompleks
+- **Outliers**: Penanganan outliers yang lebih agresif pada tahap pra-pemrosesan akan sangat membantu stabilitas model.
