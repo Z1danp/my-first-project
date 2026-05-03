@@ -1,19 +1,35 @@
-# My First Project as Data Scientist😆
+## My First Project as Data Scientist: House Prices Prediction😆
 
-Sebagai proyek pertama saya di bidang ***data science***, pada proyek ini saya ingin mendemonstrasikan bagaimana mengolah dataset mentah sejuta umat dari kaggle yaitu [housing prices](https://www.kaggle.com/competitions/home-data-for-ml-course). Dataset punya fitur yang sangat banyak (81 fitur) yang hubungan awalnya terhadap target belum diketahui.
+Sebagai proyek pertama saya di bidang ***data science***, saya berfokus pada pengolahan dataset mentah dari kompetisi Kaggle yang sangat populer: [housing prices](https://www.kaggle.com/competitions/home-data-for-ml-course). 
 
-Setelah melakukan EDA, cleaning data, seleksi fitur, dan modeling. Saya berhasil membangun model yang cukup kuat dengan **R-Squared 0.838**, yang berarti model ini mampu menjelaskan 83,8% variasi harga rumah hanya dengan seleksi fitur berbasis korelasi sederhana.
+Proyek ini bertujuan untuk membangun model prediktif harga rumah dengan memahami hubungan antara 81 fitur yang tersedia terhadap variabel target (SalePrice/harga jual).
 
-**Analisis galat $20,000**
+### 🛠️Tech Stack
 
-Meskipun model sudah cukup akurat, terdapat rata-rata galat sebesar **$20,094** pada Public Leaderboard. Secara teknis, saya mengidentifikasi beberapa alasan mengapa angka masih bisa ditekan lebih rendah:
+Saya menggunakan beberapa pustaka Python dalam pengerjaan proyek ini:
 
-1. **Multikolinearitas yang belum ditangani**
-   
-   Saya menyadari adanya variabel independen yang saling berkolerasi kuat pada heatmap berikut. Hal ini menyebabkan standar error pada koefisiesn regresi membengkak dan membuat model menjadi kurang stabil.
-3. **Model linier sederhana**
-   
-   Proyek ini menggunakan algoritma Linear Regression konvensional sebagai baseline. Penggunaan model non-linier seperti Random Forest atau XGBoost kemungkinan besar akan menangkap hubungan yang lebih kompleks antar fitur.
-5. **Outlier**
-   
-   Analisis residual menunjukkan adanya beberapa outliers yang prediksinya melenceng jauh,  yang memberikan kontribusi signifikan terhadap pembengkakan nilai RMSE.
+- **Data Manipulation**: `Pandas`, `Numpy`
+- **Data Visualization**: `Matplotlib`, `Seaborn`
+- **Statistics**: `Scipy` (Uji normalitas dan transformasi data)
+- **Machine Learning**: `Scikit-learn` (Linear regression, model selection, metrics)
+
+### 📊Hasil Analisis
+
+1. **Korelasi Fitur**
+
+### Highlight Teknis
+
+Saya menyertakan beberapa langkah untuk memastika model bekerja secara optimal:
+
+1. **Analisis Distribusi & Transformasi Box-Cox**: Berdasarkan uji Shapiro-Wilk, ditemukan bahwa variabel target tidak terdistribusi normal. Untuk memenuhi asumsi regresi linear, saya menerapkan transformasi Box-Cox ($\lambda \ \approx -0.076$) yang secara signifikan memperbaiki distribusi data.
+2. **Seleksi Fitur Berbasis Korelasi**: Melakukan eliminiasi fitur yang tidak memiliki hubungan signifikan terhadap rumah untuk mengurangi kompleksitas model.
+3. **Data Cleaning**: Menangani nilai yang hilang secara sistematis berdasarkan konteks setiap fitur.
+
+### 📊Hasil Model
+
+Model yang dibangun menggunakan algoritma regresi linear memberikan performa yang cukup bagus:
+
+- **R-Squared**: 0.838
+   Model mampu menjelaskan sekitar 83,8% variasi harga rumah hanya dengan seleksi fitur sederhana
+
+- 
