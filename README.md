@@ -18,19 +18,19 @@ Saya menggunakan beberapa pustaka Python dalam pengerjaan proyek ini:
 1. **Distribusi Target**
    Plot distribusi target menunjukkan bahwa distribusinya itu skew ke kanan, yang mana ini ngindikasiin kalau data tidak terdistribusi dengan normal dan tidak memenuhi asumsi linear regresi. Sehingga perlu dilakukan transformasi data. Pada proyek ini, saya menggunakan transformasi data menggunakan metode Box-Cox.
 
-   ![distribusi target](images\distribusi-fitur.png)
+   ![distribusi target](images/distribusi-fitur.png)
 
    Setelah itu, didapatkan transformasi pangkat dengan $\lambda \approx -0.076$ yang secara signifikan memperbaiki distribusi data pada gambar dibawah
 
-   ![transformasi target](images\normal-dist.png).
+   ![transformasi target](images/normal-dist.png).
 3. **Korelasi Fitur**
    Korelasi fitur ini dilakukan untuk menseleksi fitur dengan angka korelasi > 0,5 yang selanjutnya fitur ini akan digunakan untuk membangun model
 
-   ![heatmap](images\heatmap.png)
+   ![heatmap](images/heatmap.png)
 5. **Analisis Residual**
    Dari grafik ini menunjukkan bahwa terdapat beberapa prediksi yang melenceng jauh mengindikasikan keberadaan outlier.
 
-   ![pred vs. act](images\Predict-vs.png)
+   ![pred vs. act](images/Predict-vs.png)
 
 ### Highlight Teknis
 
